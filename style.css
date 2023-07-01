@@ -34,11 +34,18 @@ main {
   font-size: 20px;
 }
 
-.book-grid {
+#book-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
   padding: 2rem 5rem;
+}
+
+.book-card {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 footer {
