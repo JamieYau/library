@@ -35,3 +35,8 @@ function displayLibrary() {
 
 console.log(myLibrary);
 //addBookToLibrary();
+
+// event listener that will call addBookToLibrary() when button is clicked
+const addBookButton = document.getElementById("add-book-btn");
+addBookButton.addEventListener("click", addBookToLibrary);
+console.log(addBookButton);
