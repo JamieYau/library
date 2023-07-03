@@ -102,6 +102,12 @@ function displayLibrary() {
       displayLibrary();
     });
 
+    // Add event listener to read status button
+    newBookReadStatusButton.addEventListener("click", () => {
+      myLibrary[index].isRead = !myLibrary[index].isRead;
+      displayLibrary();
+    });
+
     bookGrid.appendChild(newBook);
   });
 }
