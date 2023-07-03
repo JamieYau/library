@@ -36,6 +36,7 @@ main {
 
 .overlay {
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
   width: 100%;
@@ -45,6 +46,7 @@ main {
 
 #form-container {
   position: absolute;
+  z-index: 2;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
