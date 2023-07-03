@@ -16,6 +16,10 @@ function Book(title, author, pages, isRead) {
       isRead ? "read" : "not read yet"
     }`;
   };
+
+  this.toggleReadStatus = function () {
+    this.isRead = !this.isRead;
+  };
 }
 
 function handleFormSubmit(event) {
@@ -104,7 +108,7 @@ function displayLibrary() {
 
     // Add event listener to read status button
     newBookReadStatusButton.addEventListener("click", () => {
-      myLibrary[index].isRead = !myLibrary[index].isRead;
+      book.toggleReadStatus();
       displayLibrary();
     });
 
