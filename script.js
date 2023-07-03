@@ -18,24 +18,32 @@ function Book(title, author, pages, isRead) {
   };
 }
 
-function addBookToLibrary() {
-  toggleModal();
+function handleFormSubmit(event) {
+  event.preventDefault();
 
-  // Prompt user for book details
-  let title = prompt("Enter the book title:");
-  let author = prompt("Enter the author's name:");
-  let pages = prompt("Enter the number of pages:");
-  let isRead = confirm("Has the book been read?");
+  // Get form values
+  const title = document.getElementById("title").value;
+  const author = document.getElementById("author").value;
+  const pages = document.getElementById("pages").value;
+  const isRead = document.getElementById("is-read").checked;
 
   // Create new book object
   let newBook = new Book(title, author, pages, isRead);
 
   // Add book to library
   myLibrary.push(newBook);
+  toggleModal();
+  displayLibrary();
+
+  // Reset form values
+  form.reset();
 }
 
 function displayLibrary() {
   const bookGrid = document.getElementById("book-grid");
+
+  // Clear book grid
+  bookGrid.innerHTML = "";
 
   myLibrary.forEach((book) => {
     const newBook = document.createElement("div");
@@ -91,12 +99,15 @@ function displayLibrary() {
 // function to remove .hidden class from #overlay and #modal
 function toggleModal() {
   const overlay = document.getElementById("overlay");
-  const modal = document.getElementById("modal");
   overlay.classList.toggle("hidden");
-  modal.classList.toggle("hidden");
 }
 
-// event listener that will call addBookToLibrary() when button is clicked
+// event listener that will toggle the modal when button is clicked
 const addBookButton = document.getElementById("add-book-btn");
-addBookButton.addEventListener("click", addBookToLibrary);
+addBookButton.addEventListener("click", toggleModal);
+
+// event listener for form submit
+const form = document.getElementById("add-book-form");
+form.addEventListener("submit", handleFormSubmit);
+
 displayLibrary();

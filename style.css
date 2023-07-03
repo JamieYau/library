@@ -61,21 +61,21 @@ main {
   width: 400px;
 }
 
-#book-form {
+#add-book-form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-#book-form h2 {
+#add-book-form h2 {
     align-self: center;
 }
 
-#book-form label {
+#add-book-form label {
   font-weight: bold;
 }
 
-#book-form input {
+#add-book-form input {
   padding: 0.5rem;
   border-radius: 5px;
   border: 1px solid #ccc;
@@ -86,7 +86,7 @@ main {
     height: 2rem;
 }
 
-#book-form button {
+#add-book-form button {
     background-color: #0d8af7;
     color: white;
     border: none;
