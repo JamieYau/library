@@ -2,7 +2,8 @@ let myLibrary = [
   new Book("book1", "author1", 100, true),
   new Book("book2", "author2", 400, false),
   new Book("book3", "author3", 120, true),
-  new Book("book4", "author4", 200, false),];
+  new Book("book4", "author4", 200, false),
+];
 
 function Book(title, author, pages, isRead) {
   this.title = title;
@@ -18,6 +19,8 @@ function Book(title, author, pages, isRead) {
 }
 
 function addBookToLibrary() {
+  toggleModal();
+
   // Prompt user for book details
   let title = prompt("Enter the book title:");
   let author = prompt("Enter the author's name:");
@@ -83,6 +86,14 @@ function displayLibrary() {
 
     bookGrid.appendChild(newBook);
   });
+}
+
+// function to remove .hidden class from #overlay and #modal
+function toggleModal() {
+  const overlay = document.getElementById("overlay");
+  const modal = document.getElementById("modal");
+  overlay.classList.toggle("hidden");
+  modal.classList.toggle("hidden");
 }
 
 // event listener that will call addBookToLibrary() when button is clicked

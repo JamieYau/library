@@ -34,7 +34,11 @@ main {
   font-size: 20px;
 }
 
-.overlay {
+.hidden {
+  display: none;
+}
+
+#overlay {
   position: absolute;
   z-index: 1;
   top: 0;
@@ -44,7 +48,7 @@ main {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-#form-container {
+#modal {
   position: absolute;
   z-index: 2;
   top: 50%;
