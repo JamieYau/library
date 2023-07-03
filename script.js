@@ -45,10 +45,14 @@ function displayLibrary() {
   // Clear book grid
   bookGrid.innerHTML = "";
 
-  myLibrary.forEach((book) => {
+  myLibrary.forEach((book, index) => {
     const newBook = document.createElement("div");
     newBook.classList.add("book-card");
 
+    // Add data-index attribute to book card
+    newBook.setAttribute("data-index", index);
+
+    // create book info and book actions divs
     const newBookInfo = document.createElement("div");
     newBookInfo.classList.add("book-info");
 
@@ -91,6 +95,12 @@ function displayLibrary() {
 
     newBook.appendChild(newBookInfo);
     newBook.appendChild(newBookActions);
+
+    // Add event listener to delete button
+    newBookDeleteButton.addEventListener("click", () => {
+      myLibrary.splice(index, 1);
+      displayLibrary();
+    });
 
     bookGrid.appendChild(newBook);
   });
