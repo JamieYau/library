@@ -148,6 +148,14 @@ main {
   background-color: #f44336;
 }
 
+.book-read-status-button:hover {
+  background-color: #0b6ea3;
+}
+
+.book-delete-button:hover {
+  background-color: #c62828;
+}
+
 footer {
   position: absolute;
   bottom: 0;
