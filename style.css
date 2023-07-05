@@ -124,6 +124,30 @@ main {
   padding-bottom: 0.5rem;
 }
 
+.book-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.book-actions button {
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.book-read-status-button {
+  background-color: #0d8af7;
+}
+
+.book-delete-button {
+  background-color: #f44336;
+}
+
 footer {
   position: absolute;
   bottom: 0;
