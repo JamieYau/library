@@ -130,4 +130,8 @@ addBookButton.addEventListener("click", toggleModal);
 const form = document.getElementById("add-book-form");
 form.addEventListener("submit", handleFormSubmit);
 
+// Event listener for close button
+const closeButton = document.getElementById("close-modal-btn");
+closeButton.addEventListener("click", toggleModal);
+
 displayLibrary();
