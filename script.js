@@ -71,18 +71,21 @@ function displayLibrary() {
     };
 
     const newBookTitle = createBookElement("div", "book-title", book.title);
-    const newBookAuthor = createBookElement("div", "book-author", book.author);
-    const newBookPages = createBookElement("div", "book-pages", book.pages);
-    const newBookReadStatus = createBookElement(
+    const newBookAuthor = createBookElement(
       "div",
-      "book-read-status",
-      book.isRead ? "Read" : "Not Read"
+      "book-author",
+      `by ${book.author}`
+    );
+    const newBookPages = createBookElement(
+      "div",
+      "book-pages",
+      `pages: ${book.pages}`
     );
 
     const newBookReadStatusButton = createBookElement(
       "button",
       "book-read-status-button",
-      "Change Read Status"
+      book.isRead ? "Read" : "Not Read"
     );
     const newBookDeleteButton = createBookElement(
       "button",
@@ -93,7 +96,6 @@ function displayLibrary() {
     newBookInfo.appendChild(newBookTitle);
     newBookInfo.appendChild(newBookAuthor);
     newBookInfo.appendChild(newBookPages);
-    newBookInfo.appendChild(newBookReadStatus);
     newBookActions.appendChild(newBookReadStatusButton);
     newBookActions.appendChild(newBookDeleteButton);
 
