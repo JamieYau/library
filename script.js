@@ -90,7 +90,7 @@ function displayLibrary() {
     const newBookDeleteButton = createBookElement(
       "button",
       "book-delete-button",
-      "Delete Book"
+      "Remove"
     );
 
     newBookInfo.appendChild(newBookTitle);

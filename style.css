@@ -133,23 +133,32 @@ main {
 .book-title {
   font-weight: bold;
   font-size: 2rem;
-  padding-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
-.book-author, .book-pages, .book-read-status {
+.book-author {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+.book-pages {
   font-size: 1.3rem;
-  padding-bottom: 0.5rem;
+  text-align: end;
 }
 
 .book-actions {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   gap: 1rem;
+  margin-top: 2rem;
 }
 
 .book-actions button {
   color: white;
   border: none;
+  width: 100px;
   padding: 0.5rem;
   border-radius: 5px;
   cursor: pointer;
