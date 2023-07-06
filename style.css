@@ -169,16 +169,24 @@ main {
   font-size: 1rem;
 }
 
-.book-read-status-button {
-  background-color: #0d8af7;
+.read {
+  background-color: #00c950;
+}
+
+.read:hover {
+  background-color: #00a74a;
+}
+
+.not-read {
+  background-color: #807f7f7c;
+}
+
+.not-read:hover {
+  background-color: #a8a8a8;
 }
 
 .book-delete-button {
   background-color: #f44336;
-}
-
-.book-read-status-button:hover {
-  background-color: #0b6ea3;
 }
 
 .book-delete-button:hover {

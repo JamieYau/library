@@ -93,6 +93,13 @@ function displayLibrary() {
       "Remove"
     );
 
+    // Add appropriate class to read status button
+    if (book.isRead) {
+      newBookReadStatusButton.classList.add("read");
+    } else {
+      newBookReadStatusButton.classList.add("not-read");
+    }
+
     newBookInfo.appendChild(newBookTitle);
     newBookInfo.appendChild(newBookAuthor);
     newBookInfo.appendChild(newBookPages);
